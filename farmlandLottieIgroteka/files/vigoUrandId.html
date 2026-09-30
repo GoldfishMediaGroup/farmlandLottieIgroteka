@@ -1,0 +1,61 @@
+
+<!-- saved from url=(0051)https://api.vigo.tech/html5/cgi-bin/vigoUrandId.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>
+    var VigoIdKey = "v_did";
+
+    function supports_html5_storage() {
+      try {
+        return 'localStorage' in window && window['localStorage'] !== null;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function setCookie(key, id) {
+        document.cookie = key + "=" + id;
+    }
+
+    function getCookie(key) {
+        var name = key + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            var l = 0;
+            while (c.charAt(l)==' ') l++;
+            c = c.substring(l,c.length);
+            if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        }
+    }
+
+    function setLs(key, id) {
+      if(supports_html5_storage()) {
+        window.localStorage.setItem(key, id);
+      }
+    }
+
+    function getLs(key) {
+      if(supports_html5_storage()) {
+        return window.localStorage.getItem(key);
+      }
+    }
+
+    window.onload = function() {
+      var cookieid = getCookie(VigoIdKey);
+      var lsid = getLs(VigoIdKey);
+      var did = cookieid || lsid;
+      if(!did) {
+        did = ("000000000000000" + Date.now().toString(16)).substr(-16) + "8653a93205bc695b";
+        setCookie(VigoIdKey, did);
+        setLs(VigoIdKey, did);
+      }
+      else if(cookieid !== lsid) {
+        setCookie(VigoIdKey, did);
+        setLs(VigoIdKey, did);
+      }
+      parent.postMessage("vigo_device_id=" + did, "*");
+    }
+    </script>
+  </head>
+<body>
+</body></html>
