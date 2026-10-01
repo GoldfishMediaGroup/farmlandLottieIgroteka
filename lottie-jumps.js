@@ -121,9 +121,7 @@ function renderLottieAnim() {
 
   const lottieCloseBtn = document.createElement('button');
   lottieCloseBtn.className = 'lottie-close-btn';
-  lottieCloseBtn.innerHTML = `<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M20.0466 0.835449L0.835328 20.0467M0.835327 0.835449L20.0466 20.0467" stroke="white" stroke-width="1.67054" stroke-linecap="round" />
-</svg>`;
+  lottieCloseBtn.innerHTML = `з`;
   lottieCloseBtn.addEventListener('click', () => handleClose(lottieContainer));
   lottieContainer.appendChild(lottieCloseBtn);
 
