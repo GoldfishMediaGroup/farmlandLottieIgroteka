@@ -47,12 +47,20 @@
   cursor: pointer;
   z-index: 1110;
 }
-.lottie-close-btn svg {
+.lottie-close-btn .lottie-close-icon {
   width: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 1;
 }
+.lottie-close-btn .lottie-close-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 @media (max-width: 48em) {
-  .lottie-close-btn svg {
+  .lottie-close-btn .lottie-close-icon {
     width: 10px;
   }
 }
