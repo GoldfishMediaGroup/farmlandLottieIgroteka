@@ -231,6 +231,6 @@ async function initLottieLibraries() {
 //добавление стилей
 function addResponsiveStyles() {
   const style = document.createElement('style');
-  style.textContent = ``;
+  style.textContent = `.lottie-mascot-fullscreen{right:20px;left:auto;bottom:140px;width:240px;height:240px;position:fixed;z-index:1035;pointer-events:none;pointer-events:none;opacity:0;transition:opacity .4s ease-in-out}.lottie-animation-wrapper{width:100%;height:100%;opacity:0;transition:opacity .4s ease-in-out}.lottie-close-btn{position:absolute;top:30px;right:10px;width:35px;aspect-ratio:1;background:rgba(0,0,0,.3);color:#fff;pointer-events:all;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;font-size:20px;line-height:normal;cursor:pointer;z-index:1110}@media (max-width:48em){.lottie-mascot-fullscreen{left:50%;transform:translateX(-50%);right:auto;bottom:80px;width:150px;height:150px}.lottie-close-btn{width:30px;top:0;right:0;font-size:16px}}`;
   document.head.appendChild(style);
 }
