@@ -121,11 +121,7 @@ function renderLottieAnim() {
 
   const lottieCloseBtn = document.createElement('button');
   lottieCloseBtn.className = 'lottie-close-btn';
-  lottieCloseBtn.innerHTML = `<span class="lottie-close-icon">
-    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20.0466 0.835449L0.835328 20.0467M0.835327 0.835449L20.0466 20.0467" stroke="white" stroke-width="1.67054" stroke-linecap="round" />
-    </svg>
-  </span>`;
+  lottieCloseBtn.textContent = `✕`;
   lottieCloseBtn.addEventListener('click', () => handleClose(lottieContainer));
   lottieContainer.appendChild(lottieCloseBtn);
 
@@ -235,6 +231,6 @@ async function initLottieLibraries() {
 //добавление стилей
 function addResponsiveStyles() {
   const style = document.createElement('style');
-  style.textContent = `.lottie-mascot-fullscreen{right:20px;left:auto;bottom:140px;width:240px;height:240px;position:fixed;z-index:1035;pointer-events:none;pointer-events:none;opacity:0;transition:opacity .4s ease-in-out}.lottie-animation-wrapper{width:100%;height:100%;opacity:0;transition:opacity .4s ease-in-out}.lottie-close-btn{position:absolute;top:30px;right:10px;width:35px;aspect-ratio:1;background:rgba(0,0,0,.3);color:#fff;pointer-events:all;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;z-index:1110}.lottie-close-btn svg{width:14px;aspect-ratio:1}@media (max-width:48em){.lottie-mascot-fullscreen{left:50%;transform:translateX(-50%);right:auto;bottom:80px;width:150px;height:150px}.lottie-close-btn svg{width:10px}.lottie-close-btn{width:30px;top:0;right:0}}`;
+  style.textContent = ``;
   document.head.appendChild(style);
 }
